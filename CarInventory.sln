@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarInventory", "CarInventory\CarInventory.csproj", "{140778D6-73ED-45F9-A476-76AA9EE8E9F7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E1FF0260-8CC8-473F-B305-57AA0381DB9F} = {E1FF0260-8CC8-473F-B305-57AA0381DB9F}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{A71783F9-F789-4D7E-8FD6-878C9C6907AC}"
 EndProject

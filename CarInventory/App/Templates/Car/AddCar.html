@@ -1,0 +1,54 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Car Information</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal" name="carForm" novalidate>
+        <fieldset>
+            <legend></legend>
+            <div class="form-group">
+                <label for="brand" class="col-lg-2 control-label">First name</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="brand" name="brand" placeholder="Brand" ng-model="car.brand" required>
+                    <p ng-show="carForm.brand.$invalid && !carForm.brand.$pristine" class="help-block">Brand is required.</p>
+                </div>
+            </div>
+
+            <!--<div class="form-group">
+                <label for="lastname" class="col-lg-2 control-label">Last name</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="lastName" name="lastname" placeholder="Last name" ng-model="car.lastName" required>
+                    <p ng-show="carForm.lastname.$invalid && !carForm.lastname.$pristine" class="help-block">Last name is required.</p>
+                </div>
+            </div>-->
+
+            <div class="form-group">
+                <label for="model" class="col-lg-2 control-label">Model</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="model" name="model" placeholder="Model" ng-model="car.model" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" required>
+                    <p ng-show="carForm.model.$invalid && !carForm.model.$pristine" class="help-block"> Model is required.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="year" class="col-lg-2 control-label">Year</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="year" name="year" placeholder="Year" ng-model="car.year">
+                    <p ng-show="carForm.year.$invalid && !carForm.year.$pristine" class="help-block"> Year is required.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="price" class="col-lg-2 control-label">Price</label>
+                <div class="col-lg-10">
+                    <input type="text" class="form-control" id="price" name="price" placeholder="Price" ng-model="car.pricePhone" required>
+                    <p ng-show="carForm.price.$invalid && !carForm.price.$pristine" class="help-block"> Price is required.</p>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="">Cancel</button>
+    <button type="submit" class="btn btn-primary" ng-click="Commands.saveCar(car)" ng-disabled="carForm.$invalid">Submit</button>
+</div>
