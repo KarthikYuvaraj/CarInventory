@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System;
 
 namespace CarInventory.Dto.Dtos
 {
-    class CarDto
+    public class CarDto
     {
         public CarDto()
         {
